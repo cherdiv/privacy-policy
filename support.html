@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Поддержка</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg-1: #ffb6d9;
+      --bg-2: #ff69b4;
+      --bg-3: #e91e8c;
+      --bg-4: #c2185b;
+      --ink: #1c0f19;
+      --ink-soft: rgba(28, 15, 25, 0.75);
+      --card: rgba(255, 255, 255, 0.85);
+      --stroke: rgba(255, 255, 255, 0.45);
+      --accent: #ff2f93;
+      --accent-dark: #9d1355;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Alegreya", "Georgia", "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 700px at 10% -10%, rgba(255, 255, 255, 0.8), transparent 60%),
+        radial-gradient(900px 600px at 100% 0%, rgba(255, 182, 217, 0.6), transparent 60%),
+        linear-gradient(160deg, var(--bg-1), var(--bg-2) 35%, var(--bg-3) 70%, var(--bg-4));
+      min-height: 100vh;
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 20px 72px;
+      position: relative;
+      animation: fadeIn 600ms ease-out;
+    }
+    h1 {
+      font-size: clamp(28px, 4vw, 44px);
+      margin: 0 0 6px;
+      letter-spacing: 0.2px;
+    }
+    h2 {
+      font-family: "Onest", "Trebuchet MS", "Verdana", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--ink-soft);
+      margin: 24px 0 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    p {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.9));
+      border: 1px solid var(--stroke);
+      border-radius: 20px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 20px 50px rgba(28, 15, 25, 0.18);
+      backdrop-filter: blur(10px);
+    }
+    .card {
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      padding: 16px;
+      background: var(--card);
+      margin: 16px 0 24px;
+      box-shadow: 0 12px 24px rgba(28, 15, 25, 0.12);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-family: "Onest", "Trebuchet MS", "Verdana", sans-serif;
+      box-shadow: 0 10px 20px rgba(157, 19, 85, 0.35);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 14px 28px rgba(157, 19, 85, 0.4); }
+    .links a {
+      color: var(--ink);
+      text-decoration: none;
+      margin-right: 14px;
+      font-weight: 600;
+      border-bottom: 2px solid rgba(28, 15, 25, 0.2);
+    }
+    .links a:hover { border-bottom-color: rgba(28, 15, 25, 0.6); }
+    iframe {
+      width: 100%;
+      max-width: 980px;
+      height: 520px;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0 16px 32px rgba(28, 15, 25, 0.2);
+      background: #fff;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      font-family: "Onest", "Trebuchet MS", "Verdana", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: var(--ink);
+      border: 1px solid var(--stroke);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 16px; }
+      iframe { height: 560px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <span class="badge">Вместе • Support</span>
+      <h1>Поддержка</h1>
+      <p>Если у вас возникли вопросы или проблемы с приложением, напишите нам — поможем быстро и по делу.</p>
+    </div>
+
+    <div class="card">
+      <p><strong>Электронная почта:</strong> yarilinoleg@gmail.com</p>
+      <p>Обычно отвечаем в течение 24–72 часов.</p>
+      <a class="btn" href="mailto:yarilinoleg@gmail.com?subject=Поддержка%20Вместе">Написать в поддержку</a>
+    </div>
+
+    <h2>Форма обращения</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfH2i7WJVcx-Y74UWPWNN5C9A978MJ-i8UlXUFJAZxkjm3csg/viewform?embedded=true" width="640" height="513" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+
+    <div class="links" style="margin-top: 20px;">
+      <a href="./privacy-policy.html">Политика конфиденциальности</a>
+      <a href="./terms-of-service.html">Пользовательское соглашение</a>
+    </div>
+  </main>
+</body>
+</html>
